@@ -31,7 +31,7 @@ eventlist = ["PlayerMessage","BlockBroken","BlockPlaced"]
 class WSHandler(tornado.websocket.WebSocketHandler):
   mcws = None
   def open(self):
-    print(f'Connect to a client.Now subscribe to all event...')
+    print('Connect to a client.Now subscribe to all event...')
     for event in eventlist:
         event = "{\"body\": {\"eventName\": \"%s\"},\"header\": {\"requestId\": \"00000000-0000-0000-0000-000000000000\",\"messagePurpose\": \"subscribe\",\"version\": 1,\"messageType\": \"commandRequest\"}}" % event
         self.write_message(event)
