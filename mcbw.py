@@ -20,7 +20,7 @@ def send_command(command ):
 class event():
     def on_message(player, message):
         pass
-    def on_blockbrocken():
+    def on_blockbroken():
         pass
 
 ############ EVENT LIST ##############
